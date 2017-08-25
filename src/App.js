@@ -1,15 +1,26 @@
 import React, { Component } from "react";
 import "./App.css";
 
+const NewsMain;
+const ContactMain;
+const
+const
+const
+const
+const
+
 class Header extends Component {
   render() {
     return (
       <div className="header">
+        <div className="clarinet" />
         <h1>King Baron Hot Club</h1>
+        <div className="guitar" />
       </div>
     );
   }
 }
+
 class Button extends Component {
   render() {
     return (
@@ -20,9 +31,24 @@ class Button extends Component {
   }
 }
 
+/* TODO
+  set state in MainContent; make function to handleClick
+  set state in NavBar to keep current button state highlighted; style held down click to look different than button:hover
+*/
+
+
 class MainContent extends Component {
+
   render() {
-    return <div className="mainContent"> </div>;
+    return (
+      <div className="mainContent">A bunch of hardcoded bio text and shizz</div>
+    );
+  }
+}
+
+class Space extends Component {
+  render() {
+    return <div className="space" />;
   }
 }
 
@@ -50,7 +76,6 @@ class App extends Component {
         <div className="mainWrapper">
           <NavBar />
           <MainContent />
-          <div className="picture" />
         </div>
       </div>
     );
