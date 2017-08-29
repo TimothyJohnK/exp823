@@ -99,8 +99,7 @@ class Button extends Component {
   render() {
     return (
       <div className="navButton" onClick={this.props.onClick}>
-        {" "}
-        {this.props.name}{" "}
+        {this.props.name}
       </div>
     );
   }
@@ -124,7 +123,7 @@ class NavBar extends Component {
   handleClick() {
     if (this.props.name === componentArray.name) {
       const filteredComponent = componentArray.filter(
-        content => this.props.content
+        (name, content) => this.props.content
       );
       return this.setState({ filteredComponent });
     }
