@@ -15,7 +15,7 @@ class NewsMain extends Component {
   render() {
     return (
       <div>
-        <p>Just some fillers; lorem ipsum</p>
+        <p>NewsMain NewsMain NewsMain</p>
         <p>Just some fillers; lorem ipsum</p>
         <p>Just some fillers; lorem ipsum</p>
       </div>
@@ -36,7 +36,7 @@ class PromoMain extends Component {
   render() {
     return (
       <div>
-        PromoMainPromoMainPromoMainPromoMain
+        <p>PromoMainPromoMainPromoMainPromoMain</p>
         <p>Just some fillers; lorem ipsum</p>
         <p>Just some fillers; lorem ipsum</p>
       </div>
@@ -94,6 +94,19 @@ class Footer extends Component {
     );
   }
 }
+class Pictures extends Component {
+  render() {
+    return (
+      <div className="pictures">
+        <div className="Tim" />
+        <div className="picture_spacer" />
+        <div className="Paul" />
+        <div className="picture_spacer" />
+        <div className="bass" />
+      </div>
+    );
+  }
+}
 
 class Button extends Component {
   render() {
@@ -105,11 +118,6 @@ class Button extends Component {
   }
 }
 
-class Viewer extends Component {
-  render() {
-    return <div className="viewer">{this.props.view}</div>;
-  }
-}
 const componentArray = [
   { name: "news", content: <NewsMain /> },
   { name: "contact", content: <ContactMain /> },
@@ -120,39 +128,45 @@ const componentArray = [
   { name: "songbook", content: <SongbookMain /> }
 ];
 class NavBar extends Component {
-  handleClick() {
-    if (this.props.name === componentArray.name) {
-      const filteredComponent = componentArray.filter(
-        (name, content) => this.props.content
-      );
-      return this.setState({ filteredComponent });
-    }
-  }
   render() {
     return (
       <div className="navBar">
-        <Button name="news" onClick={this.handleClick} />
-        <Button name="contact" onClick={this.handleClick} />
-        <Button name="promo" onClick={this.handleClick} />
-        <Button name="calendar" onClick={this.handleClick} />
-        <Button name="gallery" onClick={this.handleClick} />
-        <Button name="music" onClick={this.handleClick} />
-        <Button name="songbook" onClick={this.handleClick} />
+        <Button name="news" onClick={this.props.onClick} />
+        <Button name="contact" onClick={this.props.onClick} />
+        <Button name="promo" onClick={this.props.onClick} />
+        <Button name="calendar" onClick={this.props.onClick} />
+        <Button name="gallery" onClick={this.props.onClick} />
+        <Button name="music" onClick={this.props.onClick} />
+        <Button name="songbook" onClick={this.props.onClick} />
       </div>
     );
   }
 }
+class Viewer extends Component {
+  render() {
+    return <div className="viewer">{this.props.view}</div>;
+  }
+}
+
 class MainWrapper extends Component {
   constructor(props) {
     super(props);
     this.state = <NewsMain />;
   }
+  handleClick() {
+    const newViewerObj = componentArray.filter(
+      el => el.name === this.props.name
+    );
+    const updateViewer = newViewerObj.content;
 
+    return this.setState({ updateViewer });
+  }
   render() {
     return (
       <div className="mainWrapper">
-        <NavBar />
+        <NavBar onClick={this.handleClick.bind(this)} />
         <Viewer view={this.state} />
+        <Pictures />
       </div>
     );
   }
@@ -161,7 +175,6 @@ class MainWrapper extends Component {
 /* TODO
   set state in MainWrapper; make function to handleClick
   set state in NavBar to keep current button state highlighted; style held down click to look different than button:hover
-  Have component MainWrapper call all of it's children content
 */
 
 class App extends Component {
@@ -170,6 +183,7 @@ class App extends Component {
       <div>
         <Header />
         <MainWrapper />
+        <div className="spacer" />
         <Footer />
       </div>
     );
