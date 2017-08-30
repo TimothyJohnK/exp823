@@ -118,26 +118,41 @@ class Button extends Component {
   }
 }
 
-const componentArray = [
-  { name: "news", content: <NewsMain /> },
-  { name: "contact", content: <ContactMain /> },
-  { name: "promo", content: <PromoMain /> },
-  { name: "calendar", content: <CalendarMain /> },
-  { name: "gallery", content: <GalleryMain /> },
-  { name: "music", content: <MusicMain /> },
-  { name: "songbook", content: <SongbookMain /> }
-];
 class NavBar extends Component {
   render() {
     return (
       <div className="navBar">
-        <Button name="news" onClick={this.props.onClick} />
-        <Button name="contact" onClick={this.props.onClick} />
-        <Button name="promo" onClick={this.props.onClick} />
-        <Button name="calendar" onClick={this.props.onClick} />
-        <Button name="gallery" onClick={this.props.onClick} />
-        <Button name="music" onClick={this.props.onClick} />
-        <Button name="songbook" onClick={this.props.onClick} />
+        <Button name="news" data={<NewsMain />} onClick={this.props.onClick} />
+        <Button
+          name="contact"
+          data={<ContactMain />}
+          onClick={this.props.onClick}
+        />
+        <Button
+          name="promo"
+          data={<PromoMain />}
+          onClick={this.props.onClick}
+        />
+        <Button
+          name="calendar"
+          data={<CalendarMain />}
+          onClick={this.props.onClick}
+        />
+        <Button
+          name="gallery"
+          data={<GalleryMain />}
+          onClick={this.props.onClick}
+        />
+        <Button
+          name="music"
+          data={<MusicMain />}
+          onClick={this.props.onClick}
+        />
+        <Button
+          name="songbook"
+          data={<SongbookMain />}
+          onClick={this.props.onClick}
+        />
       </div>
     );
   }
@@ -154,13 +169,17 @@ class MainWrapper extends Component {
     this.state = <NewsMain />;
   }
   handleClick() {
-    const newViewerObj = componentArray.filter(
-      el => el.name === this.props.name
-    );
-    const updateViewer = newViewerObj.content;
+    const { name } = this.props.name;
 
-    return this.setState({ updateViewer });
+    if (name === "news") {
+      return <NewsMain />;
+    } else if (name === "contact") {
+      return <ContactMain />;
+    } else if (name === "promo") {
+      return <PromoMain />;
+    }
   }
+
   render() {
     return (
       <div className="mainWrapper">
@@ -177,7 +196,7 @@ class MainWrapper extends Component {
   set state in NavBar to keep current button state highlighted; style held down click to look different than button:hover
 */
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <div>
@@ -190,4 +209,27 @@ class App extends Component {
   }
 }
 
-export default App;
+//  Manmoe examples/help
+
+// render () {
+// 	return (
+// 		<div>
+// 			<Foo />
+// 			<Bar />
+// 			{ this.renderBaz() }
+// 		</div>
+// 	)
+// }
+
+// // obvi this is another method on the component
+// renderBaz () {
+// 	const { pageName } = this.state
+
+// 	if (pageName === 'asdf') {
+// 		return <SomeComponent />
+// 	} else if (pageName === 'fljkdflkj') {
+// 		return <SomeOtherComponent />
+// 	} else if (pageName === 'fdjkeeeeee') {
+// 		return <YetAnotherComponent />
+// 	}
+// }
