@@ -35,10 +35,17 @@ class ContactMain extends Component {
 class BioMain extends Component {
   render() {
     return (
-      <div>
-        <p>BioMainBioMainBioMainBioMain</p>
-        <p>Just some fillers; lorem ipsum</p>
-        <p>Just some fillers; lorem ipsum</p>
+      <div className="viewer_text">
+        <p>
+          The King Baron Hot Club has been making people feel good since the
+          band's inception 4 years ago. They play a diverse catalog of songs
+          from a wide variety of influences. Gypsy jazz, trad and New Orleans
+          jazz, tunes from the Great American Songbook, Klezmer, and original
+          compositions. As a group they have performed throughout Minneapolis,
+          St. Paul, and the surrounding areas. As individuals they have toured
+          the world playing an even broader range of styles. King Baron Hot Club
+          garners an enthusiastic response wherever they play.
+        </p>
       </div>
     );
   }
@@ -47,7 +54,12 @@ class CalendarMain extends Component {
   render() {
     return (
       <div>
-        <p>CalendarMain</p>
+        <ul>
+          <li>
+            Oct. 14th - 10am-Noon - Bloomington Farmer's Market with Evan Clark
+            on tuba
+          </li>
+        </ul>
       </div>
     );
   }
@@ -56,7 +68,10 @@ class GalleryMain extends Component {
   render() {
     return (
       <div>
-        <p>GalleryMain</p>
+        <img
+          src={require("./images/cartmusic.jpg")}
+          alt="Lowertown C/Art performance"
+        />
       </div>
     );
   }

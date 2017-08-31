@@ -16,9 +16,6 @@ html {
     background-size: cover;
 }
 
-
-/* black bkg with redtext header */
-
 .header {
     height: 8em;
     display: flex;
@@ -29,20 +26,6 @@ html {
     text-align: center;
     background-color: rgb(22, 22, 22);
 }
-
-
-/* red bkg w/blacktext header */
-
-
-/* .header {
-    height: 8em;
-    display: flex;
-    background-color: rgb(212, 61, 40);
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(22, 22, 22);
-} */
 
 .header h1 {
     font-family: Grenadier;
@@ -139,6 +122,16 @@ html {
     text-align: center;
     padding: 1em;
     box-shadow: 0px 5px 10px;
+}
+
+.viewer_text {
+    padding: 3em;
+    font-size: 1.2em;
+    /* font-weight: 700; */
+}
+
+ul {
+    list-style-type: none;
 }
 
 .picture_spacer {
