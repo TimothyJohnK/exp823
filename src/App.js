@@ -108,53 +108,47 @@ class Pictures extends Component {
   }
 }
 
-class Button extends Component {
-  render() {
-    return <div className="navButton" onClick={this.props.onClick} />;
-  }
-}
-
 const NavBar = ({ onClickNavButton }) => (
   <div className="navBar">
-    <button name="news" onClick={() => onClickNavButton("news")}>
-      {this.props.name}
-    </button>
-    <button name="contact" onClick={() => onClickNavButton("contact")}>
-      {this.props.name}
-    </button>
-    <button name="bio" onClick={() => onClickNavButton("bio")}>
-      {this.props.name}
-    </button>
-    <button name="gallery" onClick={() => onClickNavButton("gallery")}>
-      {this.props.name}
-    </button>
-    <button name="calendar" onClick={() => onClickNavButton("calendar")}>
-      {this.props.name}
-    </button>
-    <button name="music" onClick={() => onClickNavButton("music")}>
-      {this.props.name}
-    </button>
-    <button name="songbook" onClick={() => onClickNavButton("songbook")}>
-      {this.props.name}
-    </button>
+    <div className="navButton" onClick={() => onClickNavButton("news")}>
+      news
+    </div>
+    <div className="navButton" onClick={() => onClickNavButton("contact")}>
+      contact
+    </div>
+    <div className="navButton" onClick={() => onClickNavButton("bio")}>
+      bio
+    </div>
+    <div className="navButton" onClick={() => onClickNavButton("gallery")}>
+      gallery
+    </div>
+    <div className="navButton" onClick={() => onClickNavButton("calendar")}>
+      calendar
+    </div>
+    <div className="navButton" onClick={() => onClickNavButton("music")}>
+      music
+    </div>
+    <div className="navButton" onClick={() => onClickNavButton("songbook")}>
+      songbook
+    </div>
   </div>
 );
 
 const Viewer = ({ pageName }) => {
   const renderPage = () => {
-    if (name === "news") {
+    if (pageName === "news") {
       return <NewsMain />;
-    } else if (name === "contact") {
+    } else if (pageName === "contact") {
       return <ContactMain />;
-    } else if (name === "bio") {
+    } else if (pageName === "bio") {
       return <BioMain />;
-    } else if (name === "gallery") {
+    } else if (pageName === "gallery") {
       return <GalleryMain />;
-    } else if (name === "calendar") {
+    } else if (pageName === "calendar") {
       return <CalendarMain />;
-    } else if (name === "music") {
+    } else if (pageName === "music") {
       return <MusicMain />;
-    } else if (name === "songbook") {
+    } else if (pageName === "songbook") {
       return <SongbookMain />;
     } else {
       return <NewsMain />;
@@ -176,7 +170,7 @@ class MainWrapper extends Component {
   render() {
     return (
       <div className="mainWrapper">
-        <Navbar onClickNavButton={this.onClickNavButton.bind(this)} />
+        <NavBar onClickNavButton={this.onClickNavButton.bind(this)} />
         <Viewer pageName={this.state.pageName} />
         <Pictures />
       </div>
