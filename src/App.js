@@ -32,11 +32,11 @@ class ContactMain extends Component {
     );
   }
 }
-class PromoMain extends Component {
+class BioMain extends Component {
   render() {
     return (
       <div>
-        <p>PromoMainPromoMainPromoMainPromoMain</p>
+        <p>BioMainBioMainBioMainBioMain</p>
         <p>Just some fillers; lorem ipsum</p>
         <p>Just some fillers; lorem ipsum</p>
       </div>
@@ -110,81 +110,74 @@ class Pictures extends Component {
 
 class Button extends Component {
   render() {
-    return (
-      <div className="navButton" onClick={this.props.onClick}>
-        {this.props.name}
-      </div>
-    );
+    return <div className="navButton" onClick={this.props.onClick} />;
   }
 }
 
-class NavBar extends Component {
-  render() {
-    return (
-      <div className="navBar">
-        <Button name="news" data={<NewsMain />} onClick={this.props.onClick} />
-        <Button
-          name="contact"
-          data={<ContactMain />}
-          onClick={this.props.onClick}
-        />
-        <Button
-          name="promo"
-          data={<PromoMain />}
-          onClick={this.props.onClick}
-        />
-        <Button
-          name="calendar"
-          data={<CalendarMain />}
-          onClick={this.props.onClick}
-        />
-        <Button
-          name="gallery"
-          data={<GalleryMain />}
-          onClick={this.props.onClick}
-        />
-        <Button
-          name="music"
-          data={<MusicMain />}
-          onClick={this.props.onClick}
-        />
-        <Button
-          name="songbook"
-          data={<SongbookMain />}
-          onClick={this.props.onClick}
-        />
-      </div>
-    );
-  }
-}
-class Viewer extends Component {
-  render() {
-    return <div className="viewer">{this.props.view}</div>;
-  }
-}
+const NavBar = ({ onClickNavButton }) => (
+  <div className="navBar">
+    <button name="news" onClick={() => onClickNavButton("news")}>
+      {this.props.name}
+    </button>
+    <button name="contact" onClick={() => onClickNavButton("contact")}>
+      {this.props.name}
+    </button>
+    <button name="bio" onClick={() => onClickNavButton("bio")}>
+      {this.props.name}
+    </button>
+    <button name="gallery" onClick={() => onClickNavButton("gallery")}>
+      {this.props.name}
+    </button>
+    <button name="calendar" onClick={() => onClickNavButton("calendar")}>
+      {this.props.name}
+    </button>
+    <button name="music" onClick={() => onClickNavButton("music")}>
+      {this.props.name}
+    </button>
+    <button name="songbook" onClick={() => onClickNavButton("songbook")}>
+      {this.props.name}
+    </button>
+  </div>
+);
 
-class MainWrapper extends Component {
-  constructor(props) {
-    super(props);
-    this.state = <NewsMain />;
-  }
-  handleClick() {
-    const { name } = this.props.name;
-
+const Viewer = ({ pageName }) => {
+  const renderPage = () => {
     if (name === "news") {
       return <NewsMain />;
     } else if (name === "contact") {
       return <ContactMain />;
-    } else if (name === "promo") {
-      return <PromoMain />;
+    } else if (name === "bio") {
+      return <BioMain />;
+    } else if (name === "gallery") {
+      return <GalleryMain />;
+    } else if (name === "calendar") {
+      return <CalendarMain />;
+    } else if (name === "music") {
+      return <MusicMain />;
+    } else if (name === "songbook") {
+      return <SongbookMain />;
+    } else {
+      return <NewsMain />;
     }
+  };
+  return <div className="viewer">{renderPage()}</div>;
+};
+
+class MainWrapper extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { pageName: "news" };
+  }
+
+  onClickNavButton(pageName) {
+    this.setState({ pageName });
   }
 
   render() {
     return (
       <div className="mainWrapper">
-        <NavBar onClick={this.handleClick.bind(this)} />
-        <Viewer view={this.state} />
+        <Navbar onClickNavButton={this.onClickNavButton.bind(this)} />
+        <Viewer pageName={this.state.pageName} />
         <Pictures />
       </div>
     );
