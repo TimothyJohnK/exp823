@@ -70,6 +70,17 @@ html {
     color: blue;
 }
 
+.gallery_main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gallery_main>.left,
+.right {
+    font-size: 3em;
+}
+
 .navBar {
     font-family: "Poiret One", cursive;
     /* background-color: black; */
@@ -349,5 +360,8 @@ ul {
         width: 9em;
         border-radius: 15px;
         background-size: cover;
+    }
+    .gallery_main {
+        flex-direction: column;
     }
 }

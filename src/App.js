@@ -68,15 +68,15 @@ class CalendarMain extends Component {
 class GalleryMain extends Component {
   render() {
     return (
-      <div>
-        <div className="left">left arrow</div>
+      <div className="gallery_main">
+        <div className="left">&lsaquo;&lsaquo;</div>
         <div>
           <img
             src={require("./images/cartmusic.jpg")}
             alt="Lowertown C/Art performance"
           />
         </div>
-        <div className="right">right arrow</div>
+        <div className="right">&rsaquo;&rsaquo;</div>
       </div>
     );
   }
