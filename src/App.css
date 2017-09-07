@@ -110,13 +110,15 @@ html {
 }
 
 .viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: Arial, Helvetica, sans-serif;
     color: black;
-    background-color: rgba(255, 255, 255, 0.5);
-    flex: 2;
+    background-color: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
-    width: 700px;
     height: 600px;
+    flex: 1;
     margin: 0em 3em;
     border-radius: 0 0 25px 25px;
     text-align: center;
@@ -124,44 +126,51 @@ html {
     box-shadow: 0px 5px 10px;
 }
 
-.viewer_text {
-    padding: 3em;
+.viewer img {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.viewer>* {
+    padding: 1em;
     font-size: 1.2em;
-    /* font-weight: 700; */
 }
 
 ul {
     list-style-type: none;
+    padding: 0em;
 }
 
-.picture_spacer {
-    flex: 0.5;
+.all_pictures {
+    width: 10em;
+    height: 10em;
+    flex-basis: content;
+    background-size: cover;
 }
 
 .Tim {
-    flex: 1;
     background: url(./images/tim.png);
     border-radius: 0 0 0 10px;
     box-shadow: 0px 5px 10px;
 }
 
 .Paul {
-    flex: 1;
     background: url(./images/paul.jpg);
     border-radius: 10px 0 0 10px;
     box-shadow: 0px 5px 10px;
 }
 
 .bass {
-    flex: 1;
     background: url(./images/bass.png);
     border-radius: 10px 0 0 10px;
     box-shadow: 0px 5px 10px;
 }
 
 .pictures {
+    background-size: cover;
     width: 10em;
-    justify-content: space-around;
+    justify-content: space-between;
     display: flex;
     flex-direction: column;
     opacity: 0.94;
@@ -181,6 +190,7 @@ ul {
         height: 2em;
         flex-direction: row;
         border-radius: 0;
+        box-shadow: none;
     }
     .navButton {
         font-size: 0.7em;
@@ -208,6 +218,21 @@ ul {
     .spacer {
         height: 6em;
     }
+    .pictures {
+        justify-content: space-between;
+        align-items: center;
+        height: 12em;
+        width: 320px;
+        margin: auto;
+        border-radius: 15px;
+        flex-direction: row;
+    }
+    .all_pictures {
+        background-size: cover;
+        height: 6em;
+        width: 6em;
+        border-radius: 15px;
+    }
 }
 
 @media screen and (min-width: 400px) and (max-width: 500px) {
@@ -223,6 +248,7 @@ ul {
         height: 2em;
         flex-direction: row;
         border-radius: 0;
+        box-shadow: none;
     }
     .navButton {
         font-size: 0.7em;
@@ -240,6 +266,11 @@ ul {
         flex: 1;
         margin: auto;
     }
+    .viewer img {
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
     .mainWrapper {
         width: 100%;
         flex-direction: column;
@@ -249,6 +280,21 @@ ul {
     }
     .spacer {
         height: 6em;
+    }
+    .pictures {
+        justify-content: space-between;
+        align-items: center;
+        height: 12em;
+        width: 370px;
+        margin: auto;
+        border-radius: 15px;
+        flex-direction: row;
+    }
+    .all_pictures {
+        background-size: cover;
+        height: 7em;
+        width: 7em;
+        border-radius: 15px;
     }
 }
 
@@ -262,9 +308,11 @@ ul {
         height: 2em;
         flex-direction: row;
         border-radius: 0;
+        box-shadow: none;
     }
     .navButton {
-        font-size: 0.7em;
+        font-size: 0.9em;
+        padding: 0.3em 0.7em;
         width: 3.5em;
         height: 1.5em;
         border-radius: 0 0 5px 0;
@@ -278,7 +326,28 @@ ul {
         width: 95%;
         margin: auto;
     }
+    .viewer img {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+    }
     .mainWrapper {
         flex-direction: column;
+    }
+    .pictures {
+        justify-content: space-between;
+        align-items: center;
+        height: 12em;
+        width: 95%;
+        margin: auto;
+        border-radius: 15px;
+        flex-direction: row;
+    }
+    .all_pictures {
+        height: 9em;
+        width: 9em;
+        border-radius: 15px;
+        background-size: cover;
     }
 }

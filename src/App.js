@@ -113,11 +113,9 @@ class Pictures extends Component {
   render() {
     return (
       <div className="pictures">
-        <div className="Tim" />
-        <div className="picture_spacer" />
-        <div className="Paul" />
-        <div className="picture_spacer" />
-        <div className="bass" />
+        <div className="Tim all_pictures" />
+        <div className="Paul all_pictures" />
+        <div className="bass all_pictures" />
       </div>
     );
   }
