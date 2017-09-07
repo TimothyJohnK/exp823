@@ -39,12 +39,13 @@ class BioMain extends Component {
         <p>
           The King Baron Hot Club has been making people feel good since the
           band's inception 4 years ago. They play a diverse catalog of songs
-          from a wide variety of influences. Gypsy jazz, trad and New Orleans
-          jazz, tunes from the Great American Songbook, Klezmer, and original
+          from a wide variety of influences: gypsy jazz, New Orleans trad jazz,
+          tunes from the Great American Songbook, klezmer, and original
           compositions. As a group they have performed throughout Minneapolis,
-          St. Paul, and the surrounding areas. As individuals they have toured
-          the world playing an even broader range of styles. King Baron Hot Club
-          garners an enthusiastic response wherever they play.
+          St. Paul, and the surrounding areas sharing the stage with such
+          notables as: Doc Severinsen. As individuals they have toured the world
+          playing an even broader range of styles. King Baron Hot Club garners
+          an enthusiastic response wherever they play.
         </p>
       </div>
     );
@@ -68,10 +69,14 @@ class GalleryMain extends Component {
   render() {
     return (
       <div>
-        <img
-          src={require("./images/cartmusic.jpg")}
-          alt="Lowertown C/Art performance"
-        />
+        <div className="left">left arrow</div>
+        <div>
+          <img
+            src={require("./images/cartmusic.jpg")}
+            alt="Lowertown C/Art performance"
+          />
+        </div>
+        <div className="right">right arrow</div>
       </div>
     );
   }
