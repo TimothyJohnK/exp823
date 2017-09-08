@@ -91,13 +91,25 @@ html {
     -moz-column-gap: 1.5em;
     overflow: auto;
     padding: 0.5em;
+    align-items: center;
+    flex: 1;
 }
 
 .songs ul {
+    text-indent: -1em;
+    margin: 1em;
     list-style-type: none;
     text-align: left;
     flex-direction: column;
     padding: 0.1em;
+}
+
+.viewer_center {
+    flex: 1;
+    justify-content: center;
+    text-align: center;
+    padding: 3em;
+    font-size: 1.2em;
 }
 
 ul li:first-child {
