@@ -56,7 +56,7 @@ class CalendarMain extends Component {
   render() {
     return (
       <div>
-        <ul>
+        <ul className="cal_list">
           <li>
             Oct. 14th - 10am-Noon - Bloomington Farmer's Market with Evan Clark
             on tuba

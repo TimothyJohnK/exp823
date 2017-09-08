@@ -1,9 +1,9 @@
-import React from "react";
+import React, { Component } from "react";
 
 export default class Songs extends Component {
   render() {
     return (
-      <div>
+      <div className="songs">
         <ul>
           <li>After You've Gone</li>
           <li>Ain’t Misbehavin’</li>
@@ -31,12 +31,11 @@ export default class Songs extends Component {
           <li>Exactly Like You</li>
           <li>Georgia</li>
           <li>Good Bait</li>
-          <li>Good Bait</li>
           <li>Honey Suckle Rose</li>
           <li>How High the Moon</li>
           <li>I Got It Bad</li>
           <li>I Thought About You</li>
-          <li>I've got the world on a string</li>
+          <li>I've Got the World on a String</li>
           <li>I’ve Found a New Baby</li>
           <li>In the Mood</li>
           <li>Is You Is or Is You Ain’t My Baby?</li>
