@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
+import Songs from "./songbook";
 
 class Header extends Component {
   render() {
@@ -92,7 +93,7 @@ class MusicMain extends Component {
 }
 class SongbookMain extends Component {
   render() {
-    return <div> SongbookMain </div>;
+    return <Songs />;
   }
 }
 
