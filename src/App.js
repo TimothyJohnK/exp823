@@ -112,19 +112,37 @@ const Pictures = () => (
     <div className="bass all_pictures" />
   </div>
 );
-
+const picturesArray = [1, 2, 3, 4, 5];
 class GalleryMain extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { count: 0 };
+  }
+  onclick(type) {
+    this.setState({
+      count: type === "right" ? this.state.count + 1 : this.state.count - 1
+    });
+  }
+
+  // this.state.count > 0 &&
+  // this.state.count < picturesArray.length
+
   render() {
     return (
       <div className="gallery_main">
-        <div className="left">&lsaquo;&lsaquo;</div>
+        <div className="left" onClick={this.onclick.bind(this, "left")}>
+          &lsaquo;&lsaquo;&nbsp;
+        </div>
         <div className="pic_display">
           <img
             src={require("./images/cartmusic.jpg")}
             alt="Lowertown C/Art performance"
           />
         </div>
-        <div className="right">&rsaquo;&rsaquo;</div>
+        <div className="right" onClick={this.onclick.bind(this, "right")}>
+          &nbsp;&rsaquo;&rsaquo;
+        </div>
+        <div>Count: {this.state.count} </div>
       </div>
     );
   }
@@ -198,11 +216,6 @@ class MainWrapper extends Component {
     );
   }
 }
-
-/* TODO
-  set state in MainWrapper; make function to handleClick
-  set state in NavBar to keep current button state highlighted; style held down click to look different than button:hover
-*/
 
 export default class App extends Component {
   render() {

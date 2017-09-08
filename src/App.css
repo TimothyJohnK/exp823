@@ -76,11 +76,19 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin: auto;
 }
 
-.gallery_main>.left,
+.left,
 .right {
     font-size: 3em;
+    color: gray;
+}
+
+.left:hover,
+.right:hover {
+    cursor: pointer;
+    color: black;
 }
 
 .songs {
