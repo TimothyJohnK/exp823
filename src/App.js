@@ -11,7 +11,6 @@ class Header extends Component {
     );
   }
 }
-
 class NewsMain extends Component {
   render() {
     return (
@@ -30,7 +29,7 @@ class ContactMain extends Component {
         <p>For booking and questions please write us at:</p>
         <div>
           <a href="mailto: kingbaron@gmail.com" className="email">
-            kingbaron@gmail.com
+            KingBaron@gmail.com
           </a>
         </div>
       </div>
@@ -42,9 +41,9 @@ class BioMain extends Component {
     return (
       <div className="viewer_center">
         <p>
-          The King Baron Hot Club has been making people feel good since the
-          band's inception 4 years ago. They play a diverse catalog of songs
-          from a wide variety of influences: gypsy jazz, New Orleans trad jazz,
+          King Baron Hot Club has been making people feel good since the band's
+          inception 4 years ago. They play a diverse catalog of songs from a
+          wide variety of influences: gypsy jazz, New Orleans trad jazz,
           classics from the Great American Songbook, klezmer, and original
           compositions. As a group they have performed throughout Minneapolis,
           St. Paul, and the surrounding areas sharing the stage with such
@@ -52,6 +51,10 @@ class BioMain extends Component {
           playing an even broader range of styles. King Baron Hot Club garners
           an enthusiastic response wherever they play.
         </p>
+        <br />
+        <p>Michael Carvale - bass</p>
+        <p>Paul Fonfara - clarinet</p>
+        <p>Tim Kirchhof - guitar</p>
       </div>
     );
   }
@@ -62,26 +65,10 @@ class CalendarMain extends Component {
       <div className="viewer_center">
         <ul className="cal_list">
           <li>
-            Oct. 14th - 10am-Noon - Bloomington Farmer's Market with Evan Clark
-            on tuba
+            Oct. 14th &nbsp; &nbsp; 10am-Noon - Bloomington Farmer's Market with
+            Evan Clark on tuba
           </li>
         </ul>
-      </div>
-    );
-  }
-}
-class GalleryMain extends Component {
-  render() {
-    return (
-      <div className="gallery_main">
-        <div className="left">&lsaquo;&lsaquo;</div>
-        <div>
-          <img
-            src={require("./images/cartmusic.jpg")}
-            alt="Lowertown C/Art performance"
-          />
-        </div>
-        <div className="right">&rsaquo;&rsaquo;</div>
       </div>
     );
   }
@@ -90,7 +77,7 @@ class MusicMain extends Component {
   render() {
     return (
       <div>
-        <p>MusicMain</p>
+        <p>Coming soon</p>
       </div>
     );
   }
@@ -100,7 +87,6 @@ class SongbookMain extends Component {
     return <Songs />;
   }
 }
-
 class Footer extends Component {
   render() {
     const year = new Date();
@@ -119,18 +105,30 @@ class Footer extends Component {
     );
   }
 }
-class Pictures extends Component {
+const Pictures = () => (
+  <div className="pictures">
+    <div className="Tim all_pictures" />
+    <div className="Paul all_pictures" />
+    <div className="bass all_pictures" />
+  </div>
+);
+
+class GalleryMain extends Component {
   render() {
     return (
-      <div className="pictures">
-        <div className="Tim all_pictures" />
-        <div className="Paul all_pictures" />
-        <div className="bass all_pictures" />
+      <div className="gallery_main">
+        <div className="left">&lsaquo;&lsaquo;</div>
+        <div className="pic_display">
+          <img
+            src={require("./images/cartmusic.jpg")}
+            alt="Lowertown C/Art performance"
+          />
+        </div>
+        <div className="right">&rsaquo;&rsaquo;</div>
       </div>
     );
   }
 }
-
 const NavBar = ({ onClickNavButton }) => (
   <div className="navBar">
     <div className="navButton" onClick={() => onClickNavButton("news")}>
@@ -218,28 +216,3 @@ export default class App extends Component {
     );
   }
 }
-
-//  Manmoe examples/help
-
-// render () {
-// 	return (
-// 		<div>
-// 			<Foo />
-// 			<Bar />
-// 			{ this.renderBaz() }
-// 		</div>
-// 	)
-// }
-
-// // obvi this is another method on the component
-// renderBaz () {
-// 	const { pageName } = this.state
-
-// 	if (pageName === 'asdf') {
-// 		return <SomeComponent />
-// 	} else if (pageName === 'fljkdflkj') {
-// 		return <SomeOtherComponent />
-// 	} else if (pageName === 'fdjkeeeeee') {
-// 		return <YetAnotherComponent />
-// 	}
-// }

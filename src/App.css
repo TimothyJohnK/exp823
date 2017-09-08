@@ -3,17 +3,19 @@
     src: url(./fonts/GrenadierNF.otf);
 }
 
-body {
-    font-family: "Poiret One", cursive;
-    height: 100%;
-}
-
 html {
+    height: 100%;
     background: url(images/jazz2.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+body {
+    font-family: "Poiret One", cursive;
+    min-height: 100%;
+    position: relative;
 }
 
 .header {
@@ -45,8 +47,8 @@ html {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.9);
     position: absolute;
+    bottom: 0;
     height: 4em;
-    padding-bottom: 2em;
 }
 
 .spacer {
@@ -61,7 +63,7 @@ html {
 .icon {
     flex: 0;
     text-decoration: none;
-    color: inherit;
+    color: rgb(212, 61, 40);
     font-size: 1.2em;
 }
 
@@ -97,7 +99,7 @@ html {
 
 .songs ul {
     text-indent: -1em;
-    margin: 1em;
+    margin-left: 1em;
     list-style-type: none;
     text-align: left;
     flex-direction: column;
@@ -105,11 +107,12 @@ html {
 }
 
 .viewer_center {
+    margin: auto;
     flex: 1;
     justify-content: center;
     text-align: center;
-    padding: 3em;
-    font-size: 1.2em;
+    padding: 0 1em;
+    overflow: auto;
 }
 
 ul li:first-child {
@@ -176,7 +179,7 @@ ul li:first-child {
     align-content: center;
 }
 
-cal_list ul {
+.cal_list {
     list-style-position: inside;
     list-style-type: none;
     padding: 0em;
@@ -392,5 +395,11 @@ cal_list ul {
     }
     .gallery_main {
         flex-direction: column;
+    }
+}
+
+@media (min-width: 1200px) {
+    .viewer_center {
+        padding: 0 4em;
     }
 }
