@@ -51,6 +51,11 @@ body {
     height: 4em;
 }
 
+.bigger {
+    margin-top: -0.2em;
+    font-size: 1.5em;
+}
+
 .spacer {
     height: 5em;
 }

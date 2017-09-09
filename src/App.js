@@ -92,7 +92,7 @@ class Footer extends Component {
     const year = new Date();
     return (
       <div className="footer">
-        <div>Some sort of thing here</div>
+        <div className="bigger">&#9818;</div>
         <div className="year">
           <h3>©{year.getFullYear()}</h3>
         </div>
@@ -127,6 +127,8 @@ const picturesArray = [
 ];
 
 class GalleryMain extends Component {
+  // TODO: fix aspect ratio as page changes size
+
   constructor(props) {
     super(props);
     this.state = { count: 0 };
