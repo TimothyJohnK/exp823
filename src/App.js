@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Songs from "./songbook";
+import MusicPlayer from "./MusicPlayer";
 
 class Header extends Component {
   render() {
@@ -28,8 +29,8 @@ class ContactMain extends Component {
       <div className="viewer_center">
         <p>For booking and questions please write us at:</p>
         <div>
-          <a href="mailto: kingbaron@gmail.com" className="email">
-            KingBaron@gmail.com
+          <a href="mailto: kingbaronhotclub@gmail.com" className="email">
+            KingBaronHotClub@gmail.com
           </a>
         </div>
       </div>
@@ -73,15 +74,19 @@ class CalendarMain extends Component {
     );
   }
 }
-class MusicMain extends Component {
-  render() {
-    return (
-      <div>
-        <p>Coming soon</p>
-      </div>
-    );
-  }
-}
+
+// Commented out because of imported MusicPlayer component
+
+// class MusicPlayer extends Component {
+//   render() {
+//     return (
+//       <div>
+//         <p>Coming soon</p>
+//       </div>
+//     );
+//   }
+// }
+
 class SongbookMain extends Component {
   render() {
     return <Songs />;
@@ -97,8 +102,8 @@ class Footer extends Component {
           <h3>©{year.getFullYear()}</h3>
         </div>
         <div>
-          <a href="mailto: kingbaron@gmail.com" className="email">
-            kingbaron@gmail.com
+          <a href="mailto: kingbaronhotclub@gmail.com" className="email">
+            KingBaronHotClub@gmail.com
           </a>
         </div>
       </div>
@@ -198,7 +203,7 @@ const Viewer = ({ pageName }) => {
     } else if (pageName === "calendar") {
       return <CalendarMain />;
     } else if (pageName === "music") {
-      return <MusicMain />;
+      return <MusicPlayer />;
     } else if (pageName === "songbook") {
       return <SongbookMain />;
     } else {

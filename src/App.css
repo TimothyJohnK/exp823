@@ -89,7 +89,7 @@ body {
 .pic_display {
     flex: 6;
     width: inherit;
-    height: inherit;
+    max-height: 100%;
 }
 
 .pic_display>img {
@@ -106,6 +106,7 @@ body {
 
 .left:hover,
 .right:hover {
+    user-select: none;
     cursor: pointer;
     color: black;
 }
@@ -239,6 +240,30 @@ ul li:first-child {
     flex-direction: column;
     opacity: 0.94;
     border-radius: 10px 0 0 10px;
+}
+
+.player_title>* {
+    flex: 1;
+}
+
+.player_buttons {
+    font-size: 2em;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+    color: gray;
+}
+
+.prev_song,
+.next_song {
+    flex: 1;
+    padding: 0.5em;
+}
+
+.prev_song:hover,
+.next_song:hover {
+    cursor: pointer;
+    color: black;
 }
 
 @media screen and (min-width: 300px) and (max-width: 399px) {
