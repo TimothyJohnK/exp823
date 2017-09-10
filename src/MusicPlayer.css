@@ -1,0 +1,50 @@
+.player {
+    margin: 2em auto;
+    padding: 1em;
+    max-height: 100%;
+    max-width: 500px;
+    position: relative;
+    background-color: rgba(200, 200, 200, 0.5);
+}
+
+.player_title {
+    padding: 1em 0;
+}
+
+.player_buttons {
+    font-size: 2em;
+    height: 2em;
+    user-select: none;
+    text-align: center;
+    color: gray;
+}
+
+.prev_song,
+.next_song {
+    padding: 0.5em;
+}
+
+.prev_song:hover,
+.next_song:hover {
+    cursor: pointer;
+    color: black;
+    background-color: lightgray;
+}
+
+.song_number {
+    width: 2em;
+    float: left;
+}
+
+.song_title {
+    text-align: center;
+}
+
+.song_length {
+    width: 3em;
+    float: right;
+}
+
+.song_list {
+    padding: 1em;
+}
