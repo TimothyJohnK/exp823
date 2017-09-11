@@ -1,12 +1,14 @@
 {
-  "main.css": "static/css/main.4ecce3b2.css",
-  "main.css.map": "static/css/main.4ecce3b2.css.map",
-  "main.js": "static/js/main.bcc4a77b.js",
-  "main.js.map": "static/js/main.bcc4a77b.js.map",
+  "main.css": "static/css/main.7e95780a.css",
+  "main.css.map": "static/css/main.7e95780a.css.map",
+  "main.js": "static/js/main.80c37db3.js",
+  "main.js.map": "static/js/main.80c37db3.js.map",
   "static/media/GrenadierNF.otf": "static/media/GrenadierNF.b25f5c60.otf",
   "static/media/bass.png": "static/media/bass.296f4d4c.png",
   "static/media/cartmusic.jpg": "static/media/cartmusic.f33d05e6.jpg",
   "static/media/clarguitar.jpg": "static/media/clarguitar.204eebf8.jpg",
   "static/media/jazz2.jpg": "static/media/jazz2.ce522c24.jpg",
+  "static/media/miraclecure.mp3": "static/media/miraclecure.8b68f5c7.mp3",
+  "static/media/thesilverswan.mp3": "static/media/thesilverswan.aa8bba9c.mp3",
   "static/media/tim.png": "static/media/tim.2dbc31cf.png"
 }
