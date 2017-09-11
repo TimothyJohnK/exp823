@@ -1,10 +1,11 @@
 .player {
-    margin: 2em auto;
-    padding: 1em;
+    margin: 0 auto 1em;
+    padding: 2em;
     max-height: 100%;
     max-width: 500px;
     position: relative;
-    background-color: rgba(200, 200, 200, 0.5);
+    background-color: rgba(212, 61, 40, 0.1);
+    border-radius: inherit;
 }
 
 .player_title {
@@ -47,4 +48,12 @@
 
 .song_list {
     padding: 1em;
+}
+
+.odd {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.even {
+    background-color: rgba(22, 22, 22, 0.1);
 }

@@ -10,13 +10,27 @@ const songRepo = [
     title: "Miracle Cure",
     songLength: "0:12",
     path: require("./songs/miraclecure.mp3")
+  },
+  {
+    title: "Miracle Cure",
+    songLength: "0:12",
+    path: require("./songs/miraclecure.mp3")
+  },
+  {
+    title: "Miracle Cure",
+    songLength: "0:12",
+    path: require("./songs/miraclecure.mp3")
   }
 ];
 
 class Song extends Component {
   render() {
     return (
-      <div className="song_wrapper">
+      <div
+        className={
+          this.props.track % 2 === 0 ? "even song_wrapper" : "odd song_wrapper"
+        }
+      >
         <span className="song_number">{this.props.track}.</span>
         <span className="song_title">
           {songRepo[this.props.track - 1].title}
@@ -33,6 +47,7 @@ export default class MusicPlayer extends Component {
     super(props);
     this.state = { count: 0, currentSong: 0 };
   }
+  buildList() {}
   playerClick(type) {
     if (type === "next_song" && this.state.count < songRepo.length - 1) {
       return this.setState({ count: this.state.count + 1 });
@@ -62,13 +77,14 @@ export default class MusicPlayer extends Component {
               className="prev_song"
               onClick={this.playerClick.bind(this, "prev_song")}
             >
-              &lsaquo;&lsaquo;&nbsp;
+              &lsaquo;&lsaquo;
             </span>
+            <span> </span>
             <span
               className="next_song"
               onClick={this.playerClick.bind(this, "next_song")}
             >
-              &nbsp;&rsaquo;&rsaquo;
+              &rsaquo;&rsaquo;
             </span>
           </div>
           <div className="song_list">
