@@ -30,7 +30,6 @@ class Song extends Component {
         className={
           this.props.track % 2 === 0 ? "even song_wrapper" : "odd song_wrapper"
         }
-        onClick={() => selectSong(this.props.track)}
       >
         <span className="song_number">{this.props.track}.</span>
         <span className="song_title">
@@ -50,6 +49,7 @@ export default class MusicPlayer extends Component {
   }
   // buildList() {};
   // TODO: build song_list from array using a build function
+  //      onClick={() => selectSong(this.props.track)}
 
   selectSong(track) {
     this.setState({ count: track });
