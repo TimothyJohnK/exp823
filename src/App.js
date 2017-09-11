@@ -48,8 +48,7 @@ class BioMain extends Component {
           wide variety of influences: gypsy jazz, New Orleans trad jazz,
           classics from the Great American Songbook, klezmer, and original
           compositions. As a group they have performed throughout Minneapolis,
-          St. Paul, and the surrounding areas sharing the stage with such
-          notables as: Doc Severinsen. As individuals they have toured the world
+          St. Paul, and the surrounding areas. As individuals they have toured the world
           playing an even broader range of styles. King Baron Hot Club garners
           an enthusiastic response wherever they play.
         </p>
@@ -60,6 +59,15 @@ class BioMain extends Component {
       </div>
     );
   }
+  // King Baron Hot Club has been making people feel good since the band's
+  // inception 4 years ago. They play a diverse catalog of songs from a
+  // wide variety of influences: gypsy jazz, New Orleans trad jazz,
+  // classics from the Great American Songbook, klezmer, and original
+  // compositions. As a group they have performed throughout Minneapolis,
+  // St. Paul, and the surrounding areas sharing the stage with such
+  // notables as: Doc Severinsen. As individuals they have toured the world
+  // playing an even broader range of styles. King Baron Hot Club garners
+  // an enthusiastic response wherever they play.
 }
 class CalendarMain extends Component {
   render() {
