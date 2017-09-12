@@ -194,6 +194,7 @@ ul li:first-child {
     background-color: rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     height: inherit;
+    min-height: 600px;
     flex: 1;
     margin: 0em 3em;
     border-radius: 0 0 25px 25px;

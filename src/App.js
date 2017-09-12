@@ -48,9 +48,9 @@ class BioMain extends Component {
           wide variety of influences: gypsy jazz, New Orleans trad jazz,
           classics from the Great American Songbook, klezmer, and original
           compositions. As a group they have performed throughout Minneapolis,
-          St. Paul, and the surrounding areas. As individuals they have toured the world
-          playing an even broader range of styles. King Baron Hot Club garners
-          an enthusiastic response wherever they play.
+          St. Paul, and the surrounding areas. As individuals they have toured
+          the world playing an even broader range of styles. King Baron Hot Club
+          garners an enthusiastic response wherever they play.
         </p>
         <br />
         <p>Michael Carvale - bass</p>
@@ -83,18 +83,6 @@ class CalendarMain extends Component {
     );
   }
 }
-
-// Commented out because of imported MusicPlayer component
-
-// class MusicPlayer extends Component {
-//   render() {
-//     return (
-//       <div>
-//         <p>Coming soon</p>
-//       </div>
-//     );
-//   }
-// }
 
 class SongbookMain extends Component {
   render() {

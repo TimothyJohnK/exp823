@@ -23,36 +23,54 @@ const songRepo = [
   }
 ];
 
-class Song extends Component {
-  render() {
-    return (
-      <div
-        className={
-          this.props.track % 2 === 0 ? "even song_wrapper" : "odd song_wrapper"
-        }
-      >
-        <span className="song_number">{this.props.track}.</span>
-        <span className="song_title">
-          {songRepo[this.props.track - 1].title}
-        </span>
-        <span className="song_length">
-          {songRepo[this.props.track - 1].songLength}
-        </span>
-      </div>
-    );
-  }
-}
+// class Song extends Component {
+//   render() {
+//     return (
+//       <div
+//         className={
+//           this.props.track % 2 === 0 ? "even song_wrapper" : "odd song_wrapper"
+//         }
+//         onClick={() => {
+//           selectSong(this.props.track);
+//         }}
+//       >
+//         <span className="song_number">{this.props.track}.</span>
+//         <span className="song_title">
+//           {songRepo[this.props.track - 1].title}
+//         </span>
+//         <span className="song_length">
+//           {songRepo[this.props.track - 1].songLength}
+//         </span>
+//       </div>
+//     );
+//   }
+// }
+
 export default class MusicPlayer extends Component {
   constructor(props) {
     super(props);
     this.state = { count: 0 };
   }
-  // buildList() {};
   // TODO: build song_list from array using a build function
-  //      onClick={() => selectSong(this.props.track)}
+  // buildList() {};
+  // selectSong()}
+
+  songBuilder() {
+    songRepo.map((song, index) => (
+      <li
+        className={index % 2 === 0 ? "even song_wrapper" : "odd song_wrapper"}
+      >
+        <span className="song_number"> {index + 1}</span>
+        <span id={index + 1} className="song_title">
+          {song.title}
+        </span>
+        <span className="song_length">{song.songLength}</span>
+      </li>
+    ));
+  }
 
   selectSong(track) {
-    this.setState({ count: track });
+    this.setState({ count: this.props.id });
   }
 
   playerClick(type) {
@@ -94,9 +112,8 @@ export default class MusicPlayer extends Component {
               &rsaquo;&rsaquo;
             </span>
           </div>
-          <div className="song_list">
-            <Song track={1} onClick="" />
-            <Song track={2} />
+          <div>
+            <ul className="song_list">{songBuilder()}</ul>
           </div>
         </div>
       </div>

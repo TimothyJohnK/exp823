@@ -6,6 +6,7 @@
     position: relative;
     background-color: rgba(212, 61, 40, 0.1);
     border-radius: inherit;
+    width: inherit;
 }
 
 .player_title {
