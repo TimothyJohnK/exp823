@@ -53,7 +53,8 @@ export default class MusicPlayer extends Component {
   }
   /*  TODO: build song_list from array using a build function
   songBuilder()
-  --tried placing in line in MusicPlayer return on line 117; didn't work... hmmm...
+  - tried placing in line in MusicPlayer return on line 117; didn't work... hmmm...
+  - ask Matt about spread operator in this function
   selectSong()
   */
   songBuilder() {
@@ -62,7 +63,7 @@ export default class MusicPlayer extends Component {
         className={index % 2 === 0 ? "even song_wrapper" : "odd song_wrapper"}
       >
         <span className="song_number"> {index + 1}</span>
-        <span id={index + 1} className="song_title">
+        <span key={index + 1} className="song_title">
           {song.title}
         </span>
         <span className="song_length">{song.songLength}</span>
@@ -71,7 +72,7 @@ export default class MusicPlayer extends Component {
   }
 
   selectSong(track) {
-    this.setState({ count: this.props.id });
+    this.setState({ count: this.props.id - 1 });
   }
 
   playerClick(type) {
