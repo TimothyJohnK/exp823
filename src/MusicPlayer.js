@@ -51,10 +51,11 @@ export default class MusicPlayer extends Component {
     super(props);
     this.state = { count: 0 };
   }
-  // TODO: build song_list from array using a build function
-  // buildList() {};
-  // selectSong()}
-
+  /*  TODO: build song_list from array using a build function
+  songBuilder()
+  --tried placing in line in MusicPlayer return on line 117; didn't work... hmmm...
+  selectSong()
+  */
   songBuilder() {
     songRepo.map((song, index) => (
       <li
