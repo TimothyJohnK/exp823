@@ -1,12 +1,12 @@
 .player {
     margin: 0 auto 1em;
-    padding: 2em;
     max-height: 100%;
     max-width: 500px;
     position: relative;
-    background-color: rgba(212, 61, 40, 0.1);
+    background-color: rgba(73, 107, 130, 0.8);
     border-radius: inherit;
-    width: inherit;
+    width: 500px;
+    user-select: none;
 }
 
 .player_title {
@@ -15,22 +15,36 @@
 
 .player_buttons {
     font-size: 2em;
-    height: 2em;
-    user-select: none;
+    height: 1.5em;
     text-align: center;
-    color: gray;
+    color: black;
+    margin-top: 0.1em;
 }
 
 .prev_song,
 .next_song {
-    padding: 0.5em;
+    padding: 0.3em 1em;
+    margin: 0.2em 0 0.3em 0;
+    cursor: pointer;
+    border-radius: 0 0 15px 15px;
 }
 
 .prev_song:hover,
 .next_song:hover {
+    box-shadow: 0px 3px 5px;
+}
+
+.song_list {
+    padding: 0em;
     cursor: pointer;
-    color: black;
-    background-color: lightgray;
+    font-size: 0.9em;
+}
+
+.song_wrapper {
+    padding-top: 0.6em;
+    list-style: none;
+    height: 2.2em;
+    box-sizing: border-box;
 }
 
 .song_number {
@@ -47,14 +61,50 @@
     float: right;
 }
 
-.song_list {
-    padding: 1em;
+.even {
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 .odd {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.even {
     background-color: rgba(22, 22, 22, 0.1);
 }
+
+audio::-webkit-media-controls-timeline-container {
+    display: inline;
+    width: inherit;
+    background-color: red;
+}
+
+
+/*
+<audio>
+
+audio::-webkit-media-controls-panel
+
+audio::-webkit-media-controls-mute-button
+
+audio::-webkit-media-controls-play-button
+
+audio::-webkit-media-controls-timeline-container
+
+audio::-webkit-media-controls-current-time-display
+
+audio::-webkit-media-controls-time-remaining-display
+
+audio::-webkit-media-controls-timeline
+
+audio::-webkit-media-controls-volume-slider-container
+
+audio::-webkit-media-controls-volume-slider
+
+audio::-webkit-media-controls-seek-back-button
+
+audio::-webkit-media-controls-seek-forward-button
+
+audio::-webkit-media-controls-fullscreen-button
+
+audio::-webkit-media-controls-rewind-button
+
+audio::-webkit-media-controls-return-to-realtime-button
+
+audio::-webkit-media-controls-toggle-closed-captions-button */

@@ -83,7 +83,6 @@ class CalendarMain extends Component {
     );
   }
 }
-
 class SongbookMain extends Component {
   render() {
     return <Songs />;
@@ -114,7 +113,6 @@ const Pictures = () => (
     <div className="bass all_pictures" />
   </div>
 );
-
 const picturesArray = [
   {
     name: require("./images/cartmusic.jpg"),
@@ -127,7 +125,6 @@ const picturesArray = [
   { name: require("./images/300.png"), description: "placeholder 3" },
   { name: require("./images/placeholder.jpg"), description: "Placeholder 4" }
 ];
-
 class GalleryMain extends Component {
   // TODO: fix aspect ratio as page changes size
 
@@ -186,7 +183,6 @@ const NavBar = ({ onClickNavButton }) => (
     </div>
   </div>
 );
-
 const Viewer = ({ pageName }) => {
   const renderPage = () => {
     if (pageName === "news") {
@@ -209,7 +205,6 @@ const Viewer = ({ pageName }) => {
   };
   return <div className="viewer">{renderPage()}</div>;
 };
-
 class MainWrapper extends Component {
   constructor(props) {
     super(props);
@@ -230,7 +225,6 @@ class MainWrapper extends Component {
     );
   }
 }
-
 export default class App extends Component {
   render() {
     return (
