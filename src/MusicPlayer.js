@@ -69,7 +69,7 @@ export default class MusicPlayer extends Component {
             {songRepo[this.state.count].songLength}
           </span>
         </div>
-        <audio className="waveform" preload="auto" controls="true">
+        <audio className="waveform" preload="auto" controls>
           <source src={songRepo[this.state.count].path} type="audio/mp3" />
         </audio>
         <div className="player_buttons">
