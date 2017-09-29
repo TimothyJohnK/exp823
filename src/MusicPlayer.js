@@ -23,10 +23,6 @@ const songRepo = [
   }
 ];
 
-/*TODO
-  - ask Matt about spread operator in this function
-  */
-
 export default class MusicPlayer extends Component {
   constructor(props) {
     super(props);
@@ -61,7 +57,7 @@ export default class MusicPlayer extends Component {
     this.waveformReload();
   }
 
-  waveformReload () {
+  waveformReload() {
     this.refs.waveform.pause();
     this.refs.waveform.load();
     this.refs.waveform.play();
