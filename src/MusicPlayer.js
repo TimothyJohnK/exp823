@@ -49,6 +49,7 @@ export default class MusicPlayer extends Component {
 
   selectSong(key) {
     this.setState({ count: key });
+    this.waveformReload();
   }
 
   playerClick(type) {
@@ -57,6 +58,13 @@ export default class MusicPlayer extends Component {
     } else if (type === "prev_song" && this.state.count > 0) {
       this.setState({ count: this.state.count - 1 });
     }
+    this.waveformReload();
+  }
+
+  waveformReload () {
+    this.refs.waveform.pause();
+    this.refs.waveform.load();
+    this.refs.waveform.play();
   }
 
   render() {
@@ -69,7 +77,7 @@ export default class MusicPlayer extends Component {
             {songRepo[this.state.count].songLength}
           </span>
         </div>
-        <audio className="waveform" preload="auto" controls>
+        <audio className="waveform" preload="auto" controls ref="waveform">
           <source src={songRepo[this.state.count].path} type="audio/mp3" />
         </audio>
         <div className="player_buttons">
