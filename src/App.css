@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-family: "Poiret One", cursive;
+    font-family: 'Poiret One', cursive;
     min-height: 100%;
     position: relative;
 }
@@ -148,7 +148,7 @@ ul li:first-child {
 }
 
 .navBar {
-    font-family: "Poiret One", cursive;
+    font-family: 'Poiret One', cursive;
     background-color: rgba(73, 107, 130, 0.9);
     width: 7em;
     height: 600px;
@@ -242,7 +242,7 @@ ul li:first-child {
     border-radius: 10px 0 0 10px;
 }
 
-@media screen and (min-width: 200px) and (max-width: 399px) {
+@media screen and (max-width: 399px) {
     .header {
         height: 5em;
     }
