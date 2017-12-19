@@ -46,20 +46,19 @@ class BioMain extends Component {
         return (
             <div className="viewer_center">
                 <p>
-                    King Baron Hot Club has been making people feel good since
-                    the band's inception 4 years ago. They play a diverse
-                    catalog of songs from a wide variety of influences: gypsy
-                    jazz, New Orleans trad jazz, classics from the Great
-                    American Songbook, klezmer, and original compositions. As a
-                    group they have performed throughout Minneapolis, St. Paul,
-                    and the surrounding areas. As individuals they have toured
-                    the world playing an even broader range of styles. King
-                    Baron Hot Club garners an enthusiastic response wherever
-                    they play.
+                    King Baron Hot Club plays a diverse catalog of songs from a
+                    wide variety of influences: gypsy jazz, New Orleans trad
+                    jazz, classics from the Great American Songbook, klezmer,
+                    and original compositions. As a group they have performed
+                    throughout Minneapolis, St. Paul, and the surrounding areas.
+                    As individuals they have toured the world playing an even
+                    broader range of styles. King Baron Hot Club makes people
+                    happy wherever they play.
                 </p>
                 <br />
-                <p>Michael Carvale - bass</p>
+                <p>Lauren Asheim - vocals</p>
                 <p>Paul Fonfara - clarinet</p>
+                <p>Josh Granowski - bass</p>
                 <p>Tim Kirchhof - guitar</p>
             </div>
         );
@@ -79,10 +78,7 @@ class CalendarMain extends Component {
         return (
             <div className="viewer_center">
                 <ul className="cal_list">
-                    <li>
-                        Oct. 14th &nbsp; &nbsp; 10am-Noon - Bloomington Farmer's
-                        Market with Evan Clark on tuba
-                    </li>
+                    <li />
                 </ul>
             </div>
         );
