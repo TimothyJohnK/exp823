@@ -126,8 +126,14 @@ const picturesArray = [
         name: require('./images/clarguitar.jpg'),
         description: 'Artful clarinet-guitar'
     },
-    { name: require('./images/300.png'), description: 'placeholder 3' },
-    { name: require('./images/placeholder.jpg'), description: 'Placeholder 4' }
+    {
+        name: require('./images/300.png'),
+        description: 'placeholder 3'
+    },
+    {
+        name: require('./images/placeholder.jpg'),
+        description: 'Placeholder 4'
+    }
 ];
 class GalleryMain extends Component {
     // TODO: fix aspect ratio as page changes size
