@@ -4,15 +4,12 @@ import './MusicPlayer.css';
 import Songs from './songbook';
 import MusicPlayer from './MusicPlayer';
 
-class Header extends Component {
-    render() {
-        return (
+const Header = () => (
             <div className="header">
                 <h1>King Baron Hot Club</h1>
             </div>
         );
-    }
-}
+
 class NewsMain extends Component {
     render() {
         return (

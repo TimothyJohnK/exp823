@@ -1,24 +1,24 @@
 {
-    "name": "exp823",
-    "homepage": "https://timothyjohnk.github.io/kingbaron",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "react": "^15.6.1",
-        "react-dom": "^15.6.1",
-        "react-scripts": "1.0.11"
-    },
-    "scripts": {
-        "start": "react-scripts start",
-        "build": "react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject",
-        "predeploy": "npm run build",
-        "deploy": "gh-pages -d build"
-    },
-    "devDependencies": {
-        "eslint": "^4.8.0",
-        "eslint-plugin-react": "^7.4.0",
-        "gh-pages": "^1.0.0"
-    }
+  "name": "exp823",
+  "homepage": "https://timothyjohnk.github.io/exp823",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-scripts": "1.0.11"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "eslint": "^4.8.0",
+    "eslint-plugin-react": "^7.4.0",
+    "gh-pages": "^1.0.0"
+  }
 }
